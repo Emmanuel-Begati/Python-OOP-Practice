@@ -1,17 +1,19 @@
 #Instantiate my class
-class Item():
+class Item:
+    def __init__(self, name, price, quantity):
+        print(f'Instance has been created for: {name}')
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
     def calculate_total_prices(self, x, y):
         return x * y
     pass
 
-item = Item()
-item.name = 'Laptop'
-item.price = 2000
-item.quantity = 2
-print(item.calculate_total_prices(item.price, item.quantity))
+item1 = Item('Laptop', 2000, 2)
 
-item2 = Item()
-item2.name = 'Phone'
-item2.price = 200
-item2.quantity = 3
-print(item2.calculate_total_prices(item2.price, item2.quantity))
+item2 = Item('Phone', 200, 3)
+
+
+print (item1.name)
+print (item2.name)
